@@ -1,0 +1,14 @@
+{
+	"sqltools.connections": [
+		{
+			"previewLimit": 50,
+			"server": "dpg-cgoe9d8rddl9mmr73cug-a.singapore-postgres.render.com",
+			"port": 5432,
+			"driver": "PostgreSQL",
+			"name": "render_db",
+			"database": "temp_assign",
+			"username": "rookie"
+		}
+	],
+	"python.analysis.typeCheckingMode": "basic"
+}
