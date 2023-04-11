@@ -26,7 +26,7 @@ def get_uptime_downtime(store_id: str, db: Session, start_time, end_time):
 
 
 def make_report(report_id: str, db: Session):
-    stores = db.query(models.StoreHours).limit(1000).all()
+    stores = db.query(models.StoreHours).limit(500).all()
     now = datetime.now()
     # get time for last hour, day, week
     last_hour = now - timedelta(hours=1)

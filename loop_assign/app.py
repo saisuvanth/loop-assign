@@ -49,6 +49,6 @@ async def get_report(report_id: str, background_tasks: BackgroundTasks, db: Sess
         background_tasks.add_task(os.remove, 'reports/'+report_id+'.csv')
         return FileResponse('reports/'+report_id+'.csv')
     elif (res and res.status == models.TriggerReportStatus.pending):
-        return {'status': 'pending', 'progress': res.progress+'%'}
+        return {'status': 'pending', 'progress': f'{res.progress}%'}
     else:
         return {'message': 'report not found'}
